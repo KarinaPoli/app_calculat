@@ -9,6 +9,11 @@ def subtract(a, b):
 def multiply(a, b):
     return a * b
 
+def divide(a, b):
+    if b == 0:
+        return "Помилка: Ділення на нуль!"
+    return a / b
+
 def main():
     parser = argparse.ArgumentParser(description="Простий CLI-калькулятор")
     parser.add_argument("operation", choices=["add", "subtract", "multiply", "divide"],
