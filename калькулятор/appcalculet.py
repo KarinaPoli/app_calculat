@@ -6,6 +6,10 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 
+def multiply(a, b):
+    return a * b
+
+
 def main():
     parser = argparse.ArgumentParser(description="Простий CLI-калькулятор")
     parser.add_argument("operation", choices=["add", "subtract"], help="Операція: add (додавання) або subtract (віднімання)")
@@ -18,6 +22,8 @@ def main():
         result = add(args.a, args.b)
     elif args.operation == "subtract":
         result = subtract(args.a, args.b)
+    elif args.operation == "multiply":
+        result = multiply(args.a, args.b)
 
     print(f"Результат: {result}")
 
